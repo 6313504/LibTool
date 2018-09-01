@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibTool", ".\LibTool\LibTool.csproj", "{3E96F463-C58B-4058-B93A-27DDB2FE98DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibTool", "LibTool\LibTool.csproj", "{3E96F463-C58B-4058-B93A-27DDB2FE98DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibTool.Test", ".\LibTool.Test\LibTool.Test.csproj", "{45FF7194-DA55-446D-9F99-BE04BA9CBF11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibTool.Test", "LibTool.Test\LibTool.Test.csproj", "{022F61E9-2CB9-47ED-B577-8DCB850A3E6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3E96F463-C58B-4058-B93A-27DDB2FE98DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E96F463-C58B-4058-B93A-27DDB2FE98DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E96F463-C58B-4058-B93A-27DDB2FE98DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45FF7194-DA55-446D-9F99-BE04BA9CBF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45FF7194-DA55-446D-9F99-BE04BA9CBF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45FF7194-DA55-446D-9F99-BE04BA9CBF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45FF7194-DA55-446D-9F99-BE04BA9CBF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022F61E9-2CB9-47ED-B577-8DCB850A3E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022F61E9-2CB9-47ED-B577-8DCB850A3E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022F61E9-2CB9-47ED-B577-8DCB850A3E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022F61E9-2CB9-47ED-B577-8DCB850A3E6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

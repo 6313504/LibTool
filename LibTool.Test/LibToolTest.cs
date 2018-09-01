@@ -20,11 +20,8 @@ namespace LibTool.Test
 
             var web = new Submit
             {
-                URL = "http://localhost/api/receive/AnYun",
-                Encode = Encoding.GetEncoding("gb2312"),
-                GetParameters = new Dictionary<string, string> {
-                    { "P_ErrMsg","Ï£Íû"}
-                }
+                URL = "https://www.baidu.com",
+                Encode = Encoding.GetEncoding("gb2312") 
             };
 
               web.Post();

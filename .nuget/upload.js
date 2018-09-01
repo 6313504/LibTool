@@ -42,7 +42,7 @@ const cmdList2 = [
     `${nugetPath}nuget.exe SetApiKey oy2diiweynyetruzfycqaqvery7ahekulmjjcfuo7yvk4y -s https://api.nuget.org/v3/index.json`,
 ]
 
-readFilePromise('../API/API.csproj', 'gb2312')
+readFilePromise(`../${projectName}/${projectName}.csproj`, 'gb2312')
     .then(str => {
         const version = /Version>([^<]+)(?:<)/g.exec(str)[1]
         return version

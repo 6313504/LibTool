@@ -3,17 +3,13 @@ using DaiChong.Lib.Util;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-//using System.Drawing.Drawing2D;
-//using System.Drawing.Imaging;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Net.NetworkInformation;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace DaiChong.Lib.Http
@@ -668,18 +664,18 @@ namespace DaiChong.Lib.Http
             SetHtmlFromResponse();
             PostTime = DateTime.Now - now;
         }
- 
-        //public Image GetImage()
-        //{
-        //    Process(HttpMethodType.GET);
-        //    return GetImageFromResponse();
-        //}
- 
-        //public Image PostImage()
-        //{
-        //    Process(HttpMethodType.POST);
-        //    return GetImageFromResponse();
-        //}
+
+        public Image GetImage()
+        {
+            Process(HttpMethodType.GET);
+            return GetImageFromResponse();
+        }
+
+        public Image PostImage()
+        {
+            Process(HttpMethodType.POST);
+            return GetImageFromResponse();
+        }
 
         public void GetFileFromResponse(HttpMethodType method, string path, string filename)
         {
@@ -822,17 +818,17 @@ namespace DaiChong.Lib.Http
         //    return result.ToString();
         //}
 
-        //public Image GetImageFromResponse()
-        //{
-        //    Image original = null;
+        public Image GetImageFromResponse()
+        {
+            Image original = null;
 
-        //    using (Stream stream = Response.GetResponseStream())
-        //    {
-        //        original = Image.FromStream(stream);
-        //    }
+            using (Stream stream = Response.GetResponseStream())
+            {
+                original = Image.FromStream(stream);
+            }
 
-        //    return original;
-        //}
+            return original;
+        }
 
 
 

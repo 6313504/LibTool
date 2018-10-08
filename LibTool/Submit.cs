@@ -2,7 +2,7 @@
 using DaiChong.Lib.Util;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
+//using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -665,13 +665,25 @@ namespace DaiChong.Lib.Http
             PostTime = DateTime.Now - now;
         }
 
-        public Image GetImage()
+        //public Image GetImage()
+        //{
+        //    Process(HttpMethodType.GET);
+        //    return GetImageFromResponse();
+        //}
+
+        //public Image PostImage()
+        //{
+        //    Process(HttpMethodType.POST);
+        //    return GetImageFromResponse();
+        //}
+
+        public byte[] GetImage()
         {
             Process(HttpMethodType.GET);
             return GetImageFromResponse();
         }
 
-        public Image PostImage()
+        public byte[] PostImage()
         {
             Process(HttpMethodType.POST);
             return GetImageFromResponse();
@@ -818,20 +830,16 @@ namespace DaiChong.Lib.Http
         //    return result.ToString();
         //}
 
-        public Image GetImageFromResponse()
+        public byte[] GetImageFromResponse()
         {
-            Image original = null;
-
             using (Stream stream = Response.GetResponseStream())
             {
-                original = Image.FromStream(stream);
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                return buffer;
             }
-
-            return original;
         }
-
-
-
+ 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

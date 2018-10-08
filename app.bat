@@ -1,0 +1,1 @@
+node D:\node\nugetUpload\nugetUpload.js

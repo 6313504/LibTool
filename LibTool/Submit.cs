@@ -677,17 +677,7 @@ namespace DaiChong.Lib.Http
         //    return GetImageFromResponse();
         //}
 
-        public byte[] GetImage()
-        {
-            Process(HttpMethodType.GET);
-            return GetImageFromResponse();
-        }
-
-        public byte[] PostImage()
-        {
-            Process(HttpMethodType.POST);
-            return GetImageFromResponse();
-        }
+       
 
         public void GetFileFromResponse(HttpMethodType method, string path, string filename)
         {
@@ -830,14 +820,9 @@ namespace DaiChong.Lib.Http
         //    return result.ToString();
         //}
 
-        public byte[] GetImageFromResponse()
+        public Stream GetStreamFromResponse()
         {
-            using (Stream stream = Response.GetResponseStream())
-            {
-                byte[] buffer = new byte[stream.Length];
-                stream.Read(buffer, 0, buffer.Length);
-                return buffer;
-            }
+            return Response.GetResponseStream();
         }
  
         public override string ToString()
